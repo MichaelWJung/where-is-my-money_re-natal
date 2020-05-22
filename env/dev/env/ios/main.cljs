@@ -1,7 +1,7 @@
 (ns ^:figwheel-no-load env.ios.main
   (:require [reagent.core :as r]
             [re-frame.core :refer [clear-subscription-cache!]]
-            [where-is-my-money.ios.core :as core]
+            [money.ios.core :as core]
             [figwheel.client :as fw]
             [env.config :as conf]))
 

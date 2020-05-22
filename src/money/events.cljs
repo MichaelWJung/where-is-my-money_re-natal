@@ -1,8 +1,8 @@
-(ns where-is-my-money.events
+(ns money.events
   (:require
    [re-frame.core :refer [reg-event-db after]]
    [clojure.spec.alpha :as s]
-   [where-is-my-money.db :as db :refer [app-db]]))
+   [money.db :as db :refer [app-db]]))
 
 ;; -- Interceptors ------------------------------------------------------------
 ;;

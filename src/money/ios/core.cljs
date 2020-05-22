@@ -1,8 +1,8 @@
-(ns where-is-my-money.ios.core
+(ns money.ios.core
   (:require [reagent.core :as r :refer [atom]]
             [re-frame.core :refer [subscribe dispatch dispatch-sync]]
-            [where-is-my-money.events]
-            [where-is-my-money.subs]))
+            [money.events]
+            [money.subs]))
 
 (def ReactNative (js/require "react-native"))
 

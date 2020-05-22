@@ -1,4 +1,4 @@
-(ns where-is-my-money.db
+(ns money.db
   (:require [clojure.spec.alpha :as s]))
 
 ;; spec of app-db

@@ -1,4 +1,4 @@
-(ns where-is-my-money.subs
+(ns money.subs
   (:require [re-frame.core :refer [reg-sub]]))
 
 (reg-sub
