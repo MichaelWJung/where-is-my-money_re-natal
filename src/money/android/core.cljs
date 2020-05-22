@@ -24,11 +24,15 @@
 (defn alert [title]
       (.alert (.-Alert ReactNative) title))
 
+(defn account [acc-name]
+  [text {:style {:font-size 30 :font-weight "100" :margin-bottom 20 :text-align "center"}} acc-name])
+
 (defn home-screen []
-  (let [greeting (subscribe [:get-greeting])]
+  (let [account-names (subscribe [:account-names])]
     (fn [{:keys [navigation]}]
       [view {:style {:flex-direction "column" :margin 40 :align-items "center"}}
-       [text {:style {:font-size 30 :font-weight "100" :margin-bottom 20 :text-align "center"}} @greeting]
+       (for [[idx acc-name] (map-indexed vector (:account-names @account-names))]
+         ^{:key idx} [account acc-name])
        [image {:source logo-img
                :style  {:width 80 :height 80 :margin-bottom 30}}]
        [touchable-highlight {:style {:background-color "#999" :padding 10 :border-radius 5 :margin-bottom 30}
@@ -51,5 +55,5 @@
       [screen {:name "About" :component (r/reactify-component about-screen)}]]]))
 
 (defn init []
-      (dispatch-sync [:initialize-db])
+      (dispatch-sync [:initialize-db {}])
       (.registerComponent app-registry "WhereIsMyMoney" #(r/reactify-component app-root)))
