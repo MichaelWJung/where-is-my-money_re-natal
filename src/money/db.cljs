@@ -37,7 +37,7 @@
       ::t/date (get-date i)}])
 
 (defn generate-transactions []
-  (into {} (map generate-transaction (range 0))))
+  (into {} (map generate-transaction (range 10))))
 
 (defn- get-account-name [i]
   (case i
@@ -50,10 +50,10 @@
     (str "Konto " i)))
 
 (defn- generate-account [i]
-  [(* 2 i) {::a/name (get-account-name i)
-            ::a/currency 0
-            ::a/parent nil
-            ::a/type :normal}])
+  [i {::a/name (get-account-name i)
+      ::a/currency 0
+      ::a/parent nil
+      ::a/type :normal}])
 
 (defn generate-accounts []
   (into {} (map generate-account (range 6))))
@@ -63,6 +63,6 @@
           :accounts (generate-accounts)
           :currencies []}
    ::screen-states {::sa/account-screen-state
-                    {::sa/account-id 4}}
+                    {::sa/account-id 0}}
    :navigation :account
    :highest-ids {:transaction 1}})

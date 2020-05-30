@@ -20,6 +20,7 @@
 (rf/reg-sub
   :current-account
   (fn [db _]
+    (prn "db " db)
     (get-in db [::db/screen-states ::sa/account-screen-state ::sa/account-id])))
 
 (rf/reg-sub
