@@ -22,7 +22,7 @@
                              :source-paths ["src" "env/dev"]
                              :cljsbuild    {:builds [
                                                      {:id           "ios"
-                                                      :source-paths ["src" "env/dev"]
+                                                      :source-paths ["src" "env/dev" "../core/src"]
                                                       :figwheel     true
                                                       :compiler     {:output-to     "target/ios/index.js"
                                                                      :main          "env.ios.main"
@@ -30,7 +30,7 @@
                                                                      :optimizations :none
                                                                      :target :nodejs}}
                                                      {:id           "android"
-                                                      :source-paths ["src" "env/dev"]
+                                                      :source-paths ["src" "env/dev" "../core/src"]
                                                       :figwheel     true
                                                       :compiler     {:output-to     "target/android/index.js"
                                                                      :main          "env.android.main"
@@ -41,7 +41,7 @@
                              :repl-options {:nrepl-middleware [cider.piggieback/wrap-cljs-repl]}}
                        :prod {:cljsbuild {:builds [
                                                    {:id           "ios"
-                                                    :source-paths ["src" "env/prod"]
+                                                    :source-paths ["src" "env/prod" "../core/src"]
                                                     :compiler     {:output-to     "index.ios.js"
                                                                    :main          "env.ios.main"
                                                                    :output-dir    "target/ios"
@@ -51,7 +51,7 @@
                                                                    :target :nodejs
                                                                    :closure-defines {"goog.DEBUG" false}}}
                                                    {:id           "android"
-                                                    :source-paths ["src" "env/prod"]
+                                                    :source-paths ["src" "env/prod" "../core/src"]
                                                     :compiler     {:output-to     "index.android.js"
                                                                    :main          "env.android.main"
                                                                    :output-dir    "target/android"
@@ -64,7 +64,7 @@
                        :advanced {:dependencies [[react-native-externs "0.2.0"]]
                                   :cljsbuild {:builds [
                                                    {:id           "ios"
-                                                    :source-paths ["src" "env/prod"]
+                                                    :source-paths ["src" "env/prod" "../core/src"]
                                                     :compiler     {:output-to     "index.ios.js"
                                                                    :main          "env.ios.main"
                                                                    :output-dir    "target/ios"
@@ -74,7 +74,7 @@
                                                                    :target :nodejs
                                                                    :closure-defines {"goog.DEBUG" false}}}
                                                    {:id           "android"
-                                                    :source-paths ["src" "env/prod"]
+                                                    :source-paths ["src" "env/prod" "../core/src"]
                                                     :compiler     {:output-to     "index.android.js"
                                                                    :main          "env.android.main"
                                                                    :output-dir    "target/android"
