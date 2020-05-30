@@ -1,7 +1,7 @@
-(ns money.adapters.account-test
+(ns money.core.adapters.account-test
   (:require [clojure.test :refer [deftest is are testing]]
-            [money.adapters.account :as aa]
-            [money.core.account :as a]))
+            [money.core.account :as a]
+            [money.core.adapters.account :as aa]))
 
 (def account1 {::a/name "Checking Account"
                ::a/currency 1

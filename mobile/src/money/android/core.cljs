@@ -3,7 +3,7 @@
             ["@react-navigation/native" :refer [NavigationContainer]]
             ["@react-navigation/stack" :refer [createStackNavigator]]
             [re-frame.core :refer [subscribe dispatch dispatch-sync]]
-            [money.presenters.transaction-presenter :as tp]
+            [money.core.presenters.transaction-presenter :as tp]
             [money.events]
             [money.subs]))
 

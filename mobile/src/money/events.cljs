@@ -2,10 +2,10 @@
   (:require [money.db :as db]
             ; [money.store :refer [data->store]]
             [clojure.spec.alpha :as s]
-            [money.adapters.account :as aa]
+            [money.core.adapters.account :as aa]
+            [money.core.screens.account :as sa]
+            [money.core.screens.transaction :as st]
             [money.core.transaction :as t]
-            [money.screens.account :as sa]
-            [money.screens.transaction :as st]
             [re-frame.core :as rf]))
 
 (defn check-and-throw

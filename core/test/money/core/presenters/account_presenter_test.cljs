@@ -1,9 +1,9 @@
-(ns money.presenters.account-presenter-test
+(ns money.core.presenters.account-presenter-test
   (:require [clojure.spec.alpha :as s]
             [clojure.test :refer [deftest is are testing]]
-            [money.screens.account :as sa]
-            [money.presenters.account-presenter :as ap]
             [money.core.account :as a]
+            [money.core.presenters.account-presenter :as ap]
+            [money.core.screens.account :as sa]
             [money.core.transaction :as t]))
 
 (def account1 {::a/name "Checking Account"

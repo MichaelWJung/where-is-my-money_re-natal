@@ -1,4 +1,4 @@
-(ns money.adapters.account
+(ns money.core.adapters.account
   (:require [clojure.spec.alpha :as s]
             [money.core.account :as a]))
 

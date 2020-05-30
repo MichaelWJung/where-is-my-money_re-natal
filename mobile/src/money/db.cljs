@@ -2,8 +2,8 @@
   (:require [cljs.spec.alpha :as s]
             [money.core.account :as a]
             [money.core.transaction :as t]
-            [money.screens.account :as sa]
-            [money.screens.transaction :as st]))
+            [money.core.screens.account :as sa]
+            [money.core.screens.transaction :as st]))
 
 (s/def ::currencies (constantly true))
 (s/def ::data (s/keys :req-un [::t/transactions ::a/accounts ::currencies]))

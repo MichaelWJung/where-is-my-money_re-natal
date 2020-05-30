@@ -1,7 +1,7 @@
-(ns money.screens.transaction
+(ns money.core.screens.transaction
   (:require [cljs.reader]
             [cljs.spec.alpha :as s]
-            [money.adapters.account :as aa]
+            [money.core.adapters.account :as aa]
             [money.core.transaction :as t]))
 
 (s/def ::description string?)

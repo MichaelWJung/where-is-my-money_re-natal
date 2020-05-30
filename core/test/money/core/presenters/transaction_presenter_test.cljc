@@ -1,8 +1,8 @@
-(ns money.presenters.transaction-presenter-test
+(ns money.core.presenters.transaction-presenter-test
   (:require [clojure.test :refer [deftest is are testing]]
             [money.core.account :as a]
-            [money.presenters.transaction-presenter :as tp]
-            [money.screens.transaction :as st]))
+            [money.core.presenters.transaction-presenter :as tp]
+            [money.core.screens.transaction :as st]))
 
 (defn- account [id name]
   {::a/name name

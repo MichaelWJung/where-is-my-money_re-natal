@@ -1,9 +1,9 @@
-(ns money.screens.transaction-test
+(ns money.core.screens.transaction-test
   (:require [clojure.core :refer [ExceptionInfo]]
             [clojure.test :refer [deftest is are testing]]
             [money.core.account :as a]
-            [money.core.transaction :as t]
-            [money.screens.transaction :as st]))
+            [money.core.screens.transaction :as st]
+            [money.core.transaction :as t]))
 
 (deftest parse-string-to-amount
   (testing "Result is number"

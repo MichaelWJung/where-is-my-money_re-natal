@@ -1,4 +1,4 @@
-(ns money.screens.account
+(ns money.core.screens.account
   (:require [cljs.spec.alpha :as s]))
 
 (s/def ::account-id int?)

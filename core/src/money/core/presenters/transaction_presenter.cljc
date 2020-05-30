@@ -1,8 +1,8 @@
-(ns money.presenters.transaction-presenter
+(ns money.core.presenters.transaction-presenter
   (:require [clojure.spec.alpha :as s]
             [money.core.account :as a]
-            [money.presenters.account-presenter :as ap]
-            [money.screens.transaction :as st]))
+            [money.core.presenters.account-presenter :as ap]
+            [money.core.screens.transaction :as st]))
 
 (def new-transaction-title "New transaction")
 (def edit-transaction-title "Edit transaction")

@@ -1,10 +1,9 @@
-(ns money.presenters.account-presenter
+(ns money.core.presenters.account-presenter
   (:require [clojure.spec.alpha :as s]
-            [money.adapters.account :as aa]
             [money.core.account :as a]
-            [money.core.utils :as u]
-            [money.screens.account :as sa]
-            [money.core.transaction :as t]))
+            [money.core.adapters.account :as aa]
+            [money.core.transaction :as t]
+            [money.core.utils :as u]))
 
 (s/def ::id int?)
 (s/def ::split-id int?)
